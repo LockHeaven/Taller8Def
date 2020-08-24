@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="row justify-content-center">
+        <div class="card text-white bg-danger mb-3" style="max-width: 50rem;">
+            <div class="card-header">Eliminacion de usuario</div>
+            <div class="card-body">
+                <h4 class="card-title">Estas a punto de eliminar un usuario</h4>
+                <p class="card-text">Al eliminar el usuario no podras volver a recuperarlo y perderas toda la
+                    informacion sobre este usuario,<br> ¿Estas seguro de que quieres a {{ persona.nombres }}
+                    {{ persona.apellidos }} ?</p>
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-success">Eliminar</button>
+                    <a type="button" class="btn btn-warning offset-md-1" href="{% url 'home' %}">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

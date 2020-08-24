@@ -1,0 +1,30 @@
+insert into appusuarios_persona (nombres, apellidos, documento, email, telefono, usuario, password, fechanacimiento, tipodocumento_id, residencia_id)
+values
+("Luis","Spinetta Torrez",1005452149,"spinetta@gmail.com",3186387210,"flaco","password","1970-01-01",3,4), 
+("Lucas","Prodan Sumo",1005452148,"sumo@gmail.com",3186387211,"luca","123456","1971-02-01",5,5), 
+("Andres","Serrano Perez",1005452142,"andres@gmail.com",3156387211,"perez","666666","1989-02-01",3,6), 
+("Camilo","Torrez Salazar",31366,"ellen@gmail.com",3186667211,"cami","177m","1966-23-01",4,7), 
+("Emilio","Juarez Garcia",1000002148,"emily@gmail.com",3146356231,"emily","emichenka","2008-02-01",6,8), 
+("Juan","Salazar Salazar",1005459948,"ssalazar@gmail.com",3155387211,"juan23","ssalazzar","2010-03-01",4,19), 
+("Jose","Pereira Forero",1000982145,"pere@gmail.com",3109787210,"pereira","pereforero","2000-01-11",4,9), 
+("Bartolomeo","Spiga Blanco",1443448677,"spiga@gmail.com",3111187211,"bartolome","xcv345","1999-26-12",3,10), 
+("Angie","Quintero Caro",1004455466,"caro@gmail.com",3186667810,"anyi","1233456","1996-12-02",5,11), 
+("Daniel","Suarez Blanco",1005456780,"daniel@gmail.com",3186550212,"eldanielsuarez","daniel123","1999-02-07",4,12), 
+("Sebastian","Rivera Ladino",10054421546,"sebaas@gmail.com",3111187287,"riverita","sebasaladin","1990-03-03",3,13), 
+("Kevin","Serna Santa",1005509999,"k.films@gmail.com",3116381209,"kfilms","k123456","2000-12-04",5,14), 
+("Laura","Quintero Caro",1005662148,"quintero@gmail.com",3185385255,"lau","quintero","1995-04-04",6,15), 
+("Sofia","Quiñones Sarmiento",1005450222,"sofi@gmail.com",3186587290,"sofiq","1q234q5","1998-01-02",4,16),
+("Ramon","Velasquez Albarado",1005450276,"albaro@gmail.com",3187587277,"albabare","26122612","1999-20-11",3,17);
+
+insert into tipodocumento values 
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania"),
+("CC","Cedula de ciudadania");
+
+
+ 
