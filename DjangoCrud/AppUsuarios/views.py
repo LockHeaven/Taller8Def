@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
 from .forms import PersonaForm
+from .filters import Personafilter
 
 def home(request):
     persona = Persona.objects.all()
@@ -10,7 +11,13 @@ def home(request):
 
 def listar(request):
     persona = Persona.objects.all()
-    return render(request, 'dashboard.html', {'persona':persona})
+    residencia = ciudad.objects.all()
+    documento = tipodocumento.objects.all()
+    myFilter = Personafilter(request.GET, queryset=persona)
+    persona = myFilter.qs
+    context = {'persona':persona, 'residencia':residencia,
+	'documento':documento, 'myFilter':myFilter}
+    return render(request, 'dashboard.html', context)
 
 def crear(request):
     if request.method == 'POST':

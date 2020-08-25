@@ -2,45 +2,57 @@
 
 {% block content %}
 
-<br>
-<br>
-<div class="form-group col-mb-3 offset-md-0">
-    <div class="card border-primary mb-3" style="max-width: 100rem;">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr style="text-align: center;">
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
-                    <th scope="col">TipoDocumento</th>
-                    <th scope="col">Documento</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Telefono</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">FechaNacimiento</th>
-                    <th scope="col">Residencia</th>
-                    <th scope="col">Acciones</th>
+<br><br>
 
-                </tr>
-            </thead>
-            <tbody>
-                {% for persona in persona %}
-                <tr>
-                    <td>{{persona.nombres}}</td>
-                    <td>{{persona.apellidos}}</td>
-                    <td>{{persona.tipodocumento}}</td>
-                    <td>{{persona.documento}}</td>
-                    <td>{{persona.email}}</td>
-                    <td>{{persona.telefono}}</td>
-                    <td>{{persona.usuario}}</td>
-                    <td>{{persona.fechanacimiento}}</td>
-                    <td>{{persona.residencia}}</td>
-                    <td><a type="button" class="btn btn-outline-primary" href="{% url 'editar' persona.id %}">Editar</a>
-                        <a type="button" class="btn btn-outline-danger" href="{% url 'eliminar' persona.id %}">Eliminar</a>
-                    </td>
-                {% endfor %}
-                </tr>
-            </tbody>
-        </table>
+{% include 'info.html' %}
+
+{% include 'search.html' %}
+
+<br>
+<br>
+<div class="row justify-content-center">
+    <div class="form-group col-mb-8 ">
+        <h5>USUARIOS</h5>
+        <hr>
+        <div class="card border-primary mb-3" style="max-width: 100rem;">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr style="text-align: center;">
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">TipoDocumento</th>
+                        <th scope="col">Documento</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">FechaNacimiento</th>
+                        <th scope="col">Residencia</th>
+                        <th scope="col">Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in persona %}
+                    <tr style="text-align: center;">
+                        <td>{{persona.nombres}}</td>
+                        <td>{{persona.apellidos}}</td>
+                        <td>{{persona.tipodocumento}}</td>
+                        <td>{{persona.documento}}</td>
+                        <td>{{persona.email}}</td>
+                        <td>{{persona.telefono}}</td>
+                        <td>{{persona.usuario}}</td>
+                        <td>{{persona.fechanacimiento}}</td>
+                        <td>{{persona.residencia}}</td>
+                        <td><a type="button" class="btn btn-outline-primary"
+                                href="{% url 'editar' persona.id %}">Editar</a>
+                            <a type="button" class="btn btn-outline-danger"
+                                href="{% url 'eliminar' persona.id %}">Eliminar</a>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
