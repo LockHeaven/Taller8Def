@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
 from .forms import PersonaForm
 from .filters import Personafilter
@@ -46,5 +46,10 @@ def eliminar(request,id):
         persona.delete()
         return redirect('listar')
     return render(request,'delete.html',{'persona':persona})
+
+def integrantes(request):
+    persona = Persona.objects.all()
+    context = {'persona':persona}
+    return render(request, 'integrantes.html',context)
 
 # Create your views here.
